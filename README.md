@@ -2,4 +2,4 @@
 
 ---
     
-    Main file: index.html
+**Deployment** (Main File - index.html): **https://melvin-tai.github.io/Glitch-Archive/**
