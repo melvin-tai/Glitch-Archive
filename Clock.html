@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>[TUTORIAL-ED] Clock</title>
+    <link rel="stylesheet" href="Clock.css" />
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+    <style type="text/css">
+      .cc_cursor,
+      body,
+      .ogdlpmhglpejoiomcodnpjnfgcpmgale_default,
+      body,
+      html,
+      input[type="date"],
+      input[type="time"],
+      input[type="datetime-local"],
+      input[type="month"],
+      input::-webkit-contacts-auto-fill-button,
+      input:read-only {
+        cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFiUlEQVRYR72XaXAU5RaGn+6Z6ZnMBAIaMYEkhhCT6RjjAoTCxIUS3FKKpSgg4opLGVQoQMvlllwwsVxQFDUaFLdSSxGq0HKJxoghKgLeMvHWfD1kA4NEAkSWLLOk+7vVA5e61iU/QiZ8v7q/7jrv0+e8fU63AqDruimlDKuqOiUQCPxs752spRwFkDOnT+fdtWtxaxqKopwXCAR+PRkQiq7rFx06cOD7j7duY1JqCo8sXMiGqiocqnpACHEqYA0liA1Q6XA47qr8qgpLSorSxsT0Jk6cSE9PD5ZlPWEYxrKhgrABdp5fVJxRunRpTKPPtLgwIy123NjYyLRp0/B6vXuEEClDAWEDyAfLyikoLDwWP8mtkZecfOS8o4PRF1zACE1DCBHzTDxXDODFTz4hMWnE3+KOT01Be+ZZ2NEKikJqdTUjXa5GIURO3AHWfFONPBrVcjoZVVPDmf94HKZOBXnkigmcvWlT3LMQy8A7320krGnklJcxasMGSExk0aFDbI1EuFHXmT9uHJgmY2pqGO50xtWUMYCt4TC+4UmgSDpReO7Kq1he9iTN3VHG+VwUFRWx+dxzea2+npc6O+OahRjAW5rGJEUFJGepKus2/oS+PhCrPVGT0J3nMyE9nd9KSsirrY07QNNYRRn3udsdq/XmykqK/+3AdNhAR1bJqETSv32disOHSamu5hSXa54Q4s14mFHJy8tLkVK213s8uIDqFc8zY9dIDv7XlcCtWSOJrPknH2guFmzbxtc9Pd1CiMS4ANhBdF3/uVPKwj89CaTv38f2nTvxrv4XeJw4Qn103TWeOflnsa64mO5olImbN8etDMcai+2Fi1WVCk0j1zJp+LUeuygHurooyPXz+6RCSE1lRTDIm7t32wPrwkAgUDfYLBwDyM7OPk1zuTq+cLs5Q1Gol5KGSIRLNY3RikJ5Xx+ro1ESXS5unzePyldftSEqDcO4ZzAQf2utfr+/PKQoj7R6PMdiLo9GeduycJkm2+rribrcJCiQk5HBhEmFBIXoCAQCp58oxP/1dl3X93ZJmXyn08k7pklacjItzc0sLX+KLVu28PSql2NaBRlpNLbtoqaqikULF6Cq6rBAINA1UJDjDhfbD0kjRvBtbS1h1cnsq0tY/NBD3DJ7Ns1/7CYk4aO31hAOh7jl3vugt5tz/H68Pt/0YDD46UAg+gP4MdTbO/m3llYiErwKZKamUL5iBT/U1fHsKxWxMmSnjaGh7Q+swweZUlyMaZo9QgjfoAH8fv+XL7xeecXi0lJq6xuwKedMv4bFS5YwZ+aNtOxup1fC+KxMfMOGIS2rW0p5phCifSDi9r3HzYDf71+7/rPPZtw0cxbLysoovuzy2BOPTU3h6RdWUlf7PTXffE005CVhuIk0TX379u3GQMX7BdB1/d33Pvxwrr/gHPzpaTS17aJbwh03XM/8+x/gtrk30/BTO6eYJryRTsa6RNpO8GOlPw+8XLF6dWnB5CL2tLZwbclVhEMhfIleOvf/xXWzZmHuW0dFWRtocHfx2WxyRScYhvHLQLPQH8CTK1eteiw/P5/JhYX4fD6q5u8nvaSDGaVjyckNUf5wO8zMj1VxQatKVUK4yDCMH+MFsKS3t/eZhISEvdFoNNtyOg82P7oXUsKQa7/qKhzU4I5cMrrCDFcUwtGop6mpKRwXgMzMTI/b7XYFg8HDR4fVvo1qwqm3EuLLK3pg/g64bAL4TC6JhNljWTWGYVw6UPF+TXicQEqOrlsOCHVJ6dkxzIO6vIXSRemMVlXe7+ubJoSoHkqAWOysrKwkRVHcaNqeOunleUeI9fackHKZYRhPDDnA/wrY7fo9TWNuJGJvbxRCTDmpAEe90Qt4BvPDMug/HV3XG4HPhRALTiQD/wEkMTY/lbPxVAAAAABJRU5ErkJggg==")
+            0 0,
+          auto !important;
+      }
+      .cc_pointer,
+      [type="search"]::-webkit-search-cancel-button,
+      [type="search"]::-webkit-search-decoration,
+      .paper-button,
+      .ytp-progress-bar-container,
+      input[type="submit"],
+      :link,
+      :visited,
+      a > *,
+      img,
+      button,
+      ::-webkit-scrollbar-button,
+      .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer,
+      ::-webkit-file-upload-button,
+      button,
+      .ytp-volume-panel,
+      #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon {
+        cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADWklEQVRYR+2XT0wTURDGv7eFttAWhERMjGKMgbYLUYl/UPGkCXgVQ6oxgB6MiRoiB0G9KsYo6gW9aqI28aJeDB6QeNADJFirLYutFjVUUSMVDS273d1n3lIKFqO7rfHEXLY7O5336/fmzWwJ5pnT6VzOcVx0vo99FkVxSSQSmcz0/4t7Mj9JRUXF+ry8PF97RwckRYWZ43Dl4gXIsrwmHA5H/sWCmTl+C+AbHkZcBQo5oIbnFwEWFVhU4P8pwPN8DaX0WeYxBDAAIKGzD8QEQWjUGYt0H6iurl6mKMo4+2ImQFIUQbWMFGaLFaqqQk4mQSmFxWqFJEkApeA4Dnn5+RAE4Zf+8icYLdDtdq8C8DYRj6OgsHABQM+9+yiw20EIQdOmjdje0IC2M2dhL3LAU1uLbq8XJUvLIPh86O44YQygsrLSZTKZhMnJSfT2PcLePY0LAe7eQ6GjCBxHsGfjBtTVN+B4VxccDgeaajej+/ZtlJQxgOfGAdxuN01KEoZCr/EuNAJP4xwAk/3F0ydYV7c9reLg435s3VYHxWzRfNevXcWhI0fhj44h5PdnB9DWeRKe5haMZQDoLSQWF4yOIez346LRLWAKtHV0wtPSmjNA9gqkAV7B07g7XQP/T4H0FuQGkL0C8wHYKQgGtfcBI8ZqIHuA1BZozWY6AVgL5jqUTorcADo74Wlu1bnU78NyBJg5htmaiQCBaBQjz7NsRNPTCQTejEKcafjGTFUgjI9rbToSeImu9nZjrdjpdK7mOC4yNTUFXyAIYrPrBoiLCbyfiGnxqjiNA/X1yDebjQHMrsYaEqUqzpw7D4fdDn7tWtiXliH0bAjfYjGsKC/H8opKLdwE4GHvA8QJxwYkPr4bxc2eHvYoLgiCTfcvAGaKnef5/ZTSW2zMztrE168Y/fwFrvKVsNlsiMViCI1/gkqBgf4+HD92bME6bBwbGcUsgQbgcrn2JUXR+yAQhCjLKDWbUWyxQKaANTXZGZqUqhF2KUj5wz++a2lMoGjasiUHAEny3hkYhCSKKLXZUFZUrEvJkQ9RgBDtZeTgzh2LANkroCiK9/Cp05CTMvIJtD+mmtHUxhOiFYx2x3yEaNcpVrjsGSG4cflSdgBVVVW7VFXt1bXpfwkyegp+AnrrSD8B9O1NAAAAAElFTkSuQmCC")
+            6 0,
+          auto !important;
+      }
+    </style>
+  </head>
+  <body
+    translate="no"
+    data-new-gr-c-s-check-loaded="14.984.0"
+    data-gr-ext-installed=""
+  >
+    <div class="clock-container">
+      <div class="clock-digital">
+        <div class="date">26 . November</div>
+        <div class="time">10:58 AM</div>
+        <div class="day">Thursday</div>
+      </div>
+      <div class="clock-analog">
+        <div class="spear"></div>
+        <div class="hour" style="transform: rotate(-300deg);">
+          <span style="transform: rotate(30deg) translateX(100px)">1</span
+          ><span style="transform: rotate(60deg) translateX(100px)">2</span
+          ><span style="transform: rotate(90deg) translateX(100px)">3</span
+          ><span style="transform: rotate(120deg) translateX(100px)">4</span
+          ><span style="transform: rotate(150deg) translateX(100px)">5</span
+          ><span style="transform: rotate(180deg) translateX(100px)">6</span
+          ><span style="transform: rotate(210deg) translateX(100px)">7</span
+          ><span style="transform: rotate(240deg) translateX(100px)">8</span
+          ><span style="transform: rotate(270deg) translateX(100px)">9</span
+          ><span style="transform: rotate(300deg) translateX(100px)">10</span
+          ><span style="transform: rotate(330deg) translateX(100px)">11</span
+          ><span style="transform: rotate(360deg) translateX(100px)">12</span>
+        </div>
+        <div class="minute" style="transform: rotate(-348deg);">
+          <span style="transform: rotate(0deg) translateX(145px)">0</span
+          ><span style="transform: rotate(6deg) translateX(145px)">1</span
+          ><span style="transform: rotate(12deg) translateX(145px)">2</span
+          ><span style="transform: rotate(18deg) translateX(145px)">3</span
+          ><span style="transform: rotate(24deg) translateX(145px)">4</span
+          ><span style="transform: rotate(30deg) translateX(145px)">5</span
+          ><span style="transform: rotate(36deg) translateX(145px)">6</span
+          ><span style="transform: rotate(42deg) translateX(145px)">7</span
+          ><span style="transform: rotate(48deg) translateX(145px)">8</span
+          ><span style="transform: rotate(54deg) translateX(145px)">9</span
+          ><span style="transform: rotate(60deg) translateX(145px)">10</span
+          ><span style="transform: rotate(66deg) translateX(145px)">11</span
+          ><span style="transform: rotate(72deg) translateX(145px)">12</span
+          ><span style="transform: rotate(78deg) translateX(145px)">13</span
+          ><span style="transform: rotate(84deg) translateX(145px)">14</span
+          ><span style="transform: rotate(90deg) translateX(145px)">15</span
+          ><span style="transform: rotate(96deg) translateX(145px)">16</span
+          ><span style="transform: rotate(102deg) translateX(145px)">17</span
+          ><span style="transform: rotate(108deg) translateX(145px)">18</span
+          ><span style="transform: rotate(114deg) translateX(145px)">19</span
+          ><span style="transform: rotate(120deg) translateX(145px)">20</span
+          ><span style="transform: rotate(126deg) translateX(145px)">21</span
+          ><span style="transform: rotate(132deg) translateX(145px)">22</span
+          ><span style="transform: rotate(138deg) translateX(145px)">23</span
+          ><span style="transform: rotate(144deg) translateX(145px)">24</span
+          ><span style="transform: rotate(150deg) translateX(145px)">25</span
+          ><span style="transform: rotate(156deg) translateX(145px)">26</span
+          ><span style="transform: rotate(162deg) translateX(145px)">27</span
+          ><span style="transform: rotate(168deg) translateX(145px)">28</span
+          ><span style="transform: rotate(174deg) translateX(145px)">29</span
+          ><span style="transform: rotate(180deg) translateX(145px)">30</span
+          ><span style="transform: rotate(186deg) translateX(145px)">31</span
+          ><span style="transform: rotate(192deg) translateX(145px)">32</span
+          ><span style="transform: rotate(198deg) translateX(145px)">33</span
+          ><span style="transform: rotate(204deg) translateX(145px)">34</span
+          ><span style="transform: rotate(210deg) translateX(145px)">35</span
+          ><span style="transform: rotate(216deg) translateX(145px)">36</span
+          ><span style="transform: rotate(222deg) translateX(145px)">37</span
+          ><span style="transform: rotate(228deg) translateX(145px)">38</span
+          ><span style="transform: rotate(234deg) translateX(145px)">39</span
+          ><span style="transform: rotate(240deg) translateX(145px)">40</span
+          ><span style="transform: rotate(246deg) translateX(145px)">41</span
+          ><span style="transform: rotate(252deg) translateX(145px)">42</span
+          ><span style="transform: rotate(258deg) translateX(145px)">43</span
+          ><span style="transform: rotate(264deg) translateX(145px)">44</span
+          ><span style="transform: rotate(270deg) translateX(145px)">45</span
+          ><span style="transform: rotate(276deg) translateX(145px)">46</span
+          ><span style="transform: rotate(282deg) translateX(145px)">47</span
+          ><span style="transform: rotate(288deg) translateX(145px)">48</span
+          ><span style="transform: rotate(294deg) translateX(145px)">49</span
+          ><span style="transform: rotate(300deg) translateX(145px)">50</span
+          ><span style="transform: rotate(306deg) translateX(145px)">51</span
+          ><span style="transform: rotate(312deg) translateX(145px)">52</span
+          ><span style="transform: rotate(318deg) translateX(145px)">53</span
+          ><span style="transform: rotate(324deg) translateX(145px)">54</span
+          ><span style="transform: rotate(330deg) translateX(145px)">55</span
+          ><span style="transform: rotate(336deg) translateX(145px)">56</span
+          ><span style="transform: rotate(342deg) translateX(145px)">57</span
+          ><span style="transform: rotate(348deg) translateX(145px)">58</span
+          ><span style="transform: rotate(354deg) translateX(145px)">59</span>
+        </div>
+        <div class="second" style="transform: rotate(-60deg);">
+          <span style="transform: rotate(0deg) translateX(195px)">0</span
+          ><span style="transform: rotate(6deg) translateX(195px)">1</span
+          ><span style="transform: rotate(12deg) translateX(195px)">2</span
+          ><span style="transform: rotate(18deg) translateX(195px)">3</span
+          ><span style="transform: rotate(24deg) translateX(195px)">4</span
+          ><span style="transform: rotate(30deg) translateX(195px)">5</span
+          ><span style="transform: rotate(36deg) translateX(195px)">6</span
+          ><span style="transform: rotate(42deg) translateX(195px)">7</span
+          ><span style="transform: rotate(48deg) translateX(195px)">8</span
+          ><span style="transform: rotate(54deg) translateX(195px)">9</span
+          ><span style="transform: rotate(60deg) translateX(195px)">10</span
+          ><span style="transform: rotate(66deg) translateX(195px)">11</span
+          ><span style="transform: rotate(72deg) translateX(195px)">12</span
+          ><span style="transform: rotate(78deg) translateX(195px)">13</span
+          ><span style="transform: rotate(84deg) translateX(195px)">14</span
+          ><span style="transform: rotate(90deg) translateX(195px)">15</span
+          ><span style="transform: rotate(96deg) translateX(195px)">16</span
+          ><span style="transform: rotate(102deg) translateX(195px)">17</span
+          ><span style="transform: rotate(108deg) translateX(195px)">18</span
+          ><span style="transform: rotate(114deg) translateX(195px)">19</span
+          ><span style="transform: rotate(120deg) translateX(195px)">20</span
+          ><span style="transform: rotate(126deg) translateX(195px)">21</span
+          ><span style="transform: rotate(132deg) translateX(195px)">22</span
+          ><span style="transform: rotate(138deg) translateX(195px)">23</span
+          ><span style="transform: rotate(144deg) translateX(195px)">24</span
+          ><span style="transform: rotate(150deg) translateX(195px)">25</span
+          ><span style="transform: rotate(156deg) translateX(195px)">26</span
+          ><span style="transform: rotate(162deg) translateX(195px)">27</span
+          ><span style="transform: rotate(168deg) translateX(195px)">28</span
+          ><span style="transform: rotate(174deg) translateX(195px)">29</span
+          ><span style="transform: rotate(180deg) translateX(195px)">30</span
+          ><span style="transform: rotate(186deg) translateX(195px)">31</span
+          ><span style="transform: rotate(192deg) translateX(195px)">32</span
+          ><span style="transform: rotate(198deg) translateX(195px)">33</span
+          ><span style="transform: rotate(204deg) translateX(195px)">34</span
+          ><span style="transform: rotate(210deg) translateX(195px)">35</span
+          ><span style="transform: rotate(216deg) translateX(195px)">36</span
+          ><span style="transform: rotate(222deg) translateX(195px)">37</span
+          ><span style="transform: rotate(228deg) translateX(195px)">38</span
+          ><span style="transform: rotate(234deg) translateX(195px)">39</span
+          ><span style="transform: rotate(240deg) translateX(195px)">40</span
+          ><span style="transform: rotate(246deg) translateX(195px)">41</span
+          ><span style="transform: rotate(252deg) translateX(195px)">42</span
+          ><span style="transform: rotate(258deg) translateX(195px)">43</span
+          ><span style="transform: rotate(264deg) translateX(195px)">44</span
+          ><span style="transform: rotate(270deg) translateX(195px)">45</span
+          ><span style="transform: rotate(276deg) translateX(195px)">46</span
+          ><span style="transform: rotate(282deg) translateX(195px)">47</span
+          ><span style="transform: rotate(288deg) translateX(195px)">48</span
+          ><span style="transform: rotate(294deg) translateX(195px)">49</span
+          ><span style="transform: rotate(300deg) translateX(195px)">50</span
+          ><span style="transform: rotate(306deg) translateX(195px)">51</span
+          ><span style="transform: rotate(312deg) translateX(195px)">52</span
+          ><span style="transform: rotate(318deg) translateX(195px)">53</span
+          ><span style="transform: rotate(324deg) translateX(195px)">54</span
+          ><span style="transform: rotate(330deg) translateX(195px)">55</span
+          ><span style="transform: rotate(336deg) translateX(195px)">56</span
+          ><span style="transform: rotate(342deg) translateX(195px)">57</span
+          ><span style="transform: rotate(348deg) translateX(195px)">58</span
+          ><span style="transform: rotate(354deg) translateX(195px)">59</span>
+        </div>
+        <div class="dail">
+          <span style="transform: rotate(0deg) translateX(230px)">0</span
+          ><span style="transform: rotate(6deg) translateX(230px)">1</span
+          ><span style="transform: rotate(12deg) translateX(230px)">2</span
+          ><span style="transform: rotate(18deg) translateX(230px)">3</span
+          ><span style="transform: rotate(24deg) translateX(230px)">4</span
+          ><span style="transform: rotate(30deg) translateX(230px)">5</span
+          ><span style="transform: rotate(36deg) translateX(230px)">6</span
+          ><span style="transform: rotate(42deg) translateX(230px)">7</span
+          ><span style="transform: rotate(48deg) translateX(230px)">8</span
+          ><span style="transform: rotate(54deg) translateX(230px)">9</span
+          ><span style="transform: rotate(60deg) translateX(230px)">10</span
+          ><span style="transform: rotate(66deg) translateX(230px)">11</span
+          ><span style="transform: rotate(72deg) translateX(230px)">12</span
+          ><span style="transform: rotate(78deg) translateX(230px)">13</span
+          ><span style="transform: rotate(84deg) translateX(230px)">14</span
+          ><span style="transform: rotate(90deg) translateX(230px)">15</span
+          ><span style="transform: rotate(96deg) translateX(230px)">16</span
+          ><span style="transform: rotate(102deg) translateX(230px)">17</span
+          ><span style="transform: rotate(108deg) translateX(230px)">18</span
+          ><span style="transform: rotate(114deg) translateX(230px)">19</span
+          ><span style="transform: rotate(120deg) translateX(230px)">20</span
+          ><span style="transform: rotate(126deg) translateX(230px)">21</span
+          ><span style="transform: rotate(132deg) translateX(230px)">22</span
+          ><span style="transform: rotate(138deg) translateX(230px)">23</span
+          ><span style="transform: rotate(144deg) translateX(230px)">24</span
+          ><span style="transform: rotate(150deg) translateX(230px)">25</span
+          ><span style="transform: rotate(156deg) translateX(230px)">26</span
+          ><span style="transform: rotate(162deg) translateX(230px)">27</span
+          ><span style="transform: rotate(168deg) translateX(230px)">28</span
+          ><span style="transform: rotate(174deg) translateX(230px)">29</span
+          ><span style="transform: rotate(180deg) translateX(230px)">30</span
+          ><span style="transform: rotate(186deg) translateX(230px)">31</span
+          ><span style="transform: rotate(192deg) translateX(230px)">32</span
+          ><span style="transform: rotate(198deg) translateX(230px)">33</span
+          ><span style="transform: rotate(204deg) translateX(230px)">34</span
+          ><span style="transform: rotate(210deg) translateX(230px)">35</span
+          ><span style="transform: rotate(216deg) translateX(230px)">36</span
+          ><span style="transform: rotate(222deg) translateX(230px)">37</span
+          ><span style="transform: rotate(228deg) translateX(230px)">38</span
+          ><span style="transform: rotate(234deg) translateX(230px)">39</span
+          ><span style="transform: rotate(240deg) translateX(230px)">40</span
+          ><span style="transform: rotate(246deg) translateX(230px)">41</span
+          ><span style="transform: rotate(252deg) translateX(230px)">42</span
+          ><span style="transform: rotate(258deg) translateX(230px)">43</span
+          ><span style="transform: rotate(264deg) translateX(230px)">44</span
+          ><span style="transform: rotate(270deg) translateX(230px)">45</span
+          ><span style="transform: rotate(276deg) translateX(230px)">46</span
+          ><span style="transform: rotate(282deg) translateX(230px)">47</span
+          ><span style="transform: rotate(288deg) translateX(230px)">48</span
+          ><span style="transform: rotate(294deg) translateX(230px)">49</span
+          ><span style="transform: rotate(300deg) translateX(230px)">50</span
+          ><span style="transform: rotate(306deg) translateX(230px)">51</span
+          ><span style="transform: rotate(312deg) translateX(230px)">52</span
+          ><span style="transform: rotate(318deg) translateX(230px)">53</span
+          ><span style="transform: rotate(324deg) translateX(230px)">54</span
+          ><span style="transform: rotate(330deg) translateX(230px)">55</span
+          ><span style="transform: rotate(336deg) translateX(230px)">56</span
+          ><span style="transform: rotate(342deg) translateX(230px)">57</span
+          ><span style="transform: rotate(348deg) translateX(230px)">58</span
+          ><span style="transform: rotate(354deg) translateX(230px)">59</span>
+        </div>
+      </div>
+    </div>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script id="rendered-js">
+      (function() {
+        var months = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+          ],
+          days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ];
+        function getTime() {
+          var date = new Date(),
+            second = date.getSeconds(),
+            minute = date.getMinutes(),
+            hour = date.getHours(),
+            time = date.toLocaleString("en-US", {
+              hour: "numeric",
+              minute: "numeric",
+              hour12: true
+            }),
+            day = date.getDay(),
+            month = date.getMonth(),
+            date = date.getDate() + " . " + months[month],
+            ds = second * -6,
+            dm = minute * -6,
+            dh = hour * -30;
+          $(".second").css("transform", "rotate(" + ds + "deg)");
+          $(".minute").css("transform", "rotate(" + dm + "deg)");
+          $(".hour").css("transform", "rotate(" + dh + "deg)");
+
+          $(".time").text(time);
+          $(".day").text(days[day]);
+          $(".date").text(date);
+        }
+        function dailer(selector, size) {
+          for (var s = 0; s < 60; s++) {
+            $(selector).append(
+              '<span style="transform: rotate(' +
+                6 * s +
+                "deg) translateX(" +
+                size +
+                'px)">' +
+                s +
+                "</span>"
+            );
+          }
+        }
+        dailer(".second", 195);
+        dailer(".minute", 145);
+        dailer(".dail", 230);
+
+        for (var s = 1; s < 13; s++) {
+          $(".hour").append(
+            '<span style="transform: rotate(' +
+              30 * s +
+              'deg) translateX(100px)">' +
+              s +
+              "</span>"
+          );
+        }
+        setInterval(getTime, 1000);
+        getTime();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+
+.box {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  text-align: center;
+  opacity: 0.75;
+}
+
+.box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25px;
+  transition: 1s;
+}
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+  width: 275px;
+  border-color: aqua;
+}
+
+.box input[type="submit"] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #ccaa2e;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.box input[type="submit"]:hover {
+  background: rgb(115, 115, 115);
+  color: rgb(255, 183, 0);
+  outline: black;
+  border-bottom-left-radius: 360px;
+  border-bottom-right-radius: 360px;
+  border-top-left-radius: 360px;
+  border-top-right-radius: 360px;
+  border-color: azure;
+  fill-opacity: 0.5;
+}
+
+img.bg {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  img.bg {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
+
+#login,
+#username,
+#password,
+#submit {
+  font-family: "Oswald", sans-serif;
+}
