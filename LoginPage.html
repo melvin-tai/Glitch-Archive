@@ -21,7 +21,13 @@
       <h1 id="login">Login</h1>
       <input type="text" id="username" placeholder="Username" />
       <input type="password" id="password" placeholder="Password" />
-      <input type="submit" id="submit" value="Submit" class="submission" />
+      <input href="https://melvin-tai.github.io/Glitch-Archive/" type="submit" id="submit" value="Submit" class="submission" />
+      <script>
+        document.getElementById("submit").addEventListener("click", function (e) {
+          e.preventDefault();
+          window.location.href = "https://melvin-tai.github.io/Glitch-Archive/";
+        });
+      </script>
     </form>
   </body>
 </html>
